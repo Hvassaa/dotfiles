@@ -1,0 +1,5 @@
+rofi.theme:         Indego
+
+rofi.font:          Source Code Pro 14
+
+rofi.modi:          drun
