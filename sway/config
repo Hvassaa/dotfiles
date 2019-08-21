@@ -205,36 +205,25 @@ input * {
 	xkb_layout dk
 
 	tap enabled
-    	natural_scroll enabled
+    	#natural_scroll enabled
 	middle_emulation enabled
 	dwt enabled
 
 }
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+# Set screens for home computer
+output HDMI-A-1 pos 0 0 res 1920x1080
+output DVI-I-1 pos 1920 0 res 1680x1050
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command i3status
-    #while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+# disbale border
+#default_border pixel 4
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
 
 # Lock the screen
 bindsym $mod+Ctrl+l exec swaylock --color 000000
 
 font pango: Source Code Pro Bold 14px
-#gaps inner 10
+gaps inner 10
 #gaps outer 0
 
 ###
@@ -250,10 +239,18 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound vo
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
+# start pulseaudio
+exec pulseaudio --start
+
 # notification system
 exec mako --ignore-timeout 1 --default-timeout 10000
 
 # automount usb's
 exec udiskie -F
+
+# We're using waybar instead!
+bar {
+	swaybar_command waybar
+}
 
 include /etc/sway/config.d/*

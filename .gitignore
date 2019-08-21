@@ -5,4 +5,8 @@ libreoffice/
 procps/
 pulse/
 waybar/
+i3/
+cef_user_data/
+systemd/
+pavucontrol.ini
 nvim/.netrwhist
