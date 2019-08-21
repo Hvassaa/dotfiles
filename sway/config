@@ -253,4 +253,9 @@ bar {
 	swaybar_command waybar
 }
 
+# remember network configuration can be done
+# with either nmtui (ncurses) or nm-connection-editor
+# which requires network-manager-applet installed.
+# The latter is more powerful and be used for eg eduroam
+
 include /etc/sway/config.d/*
