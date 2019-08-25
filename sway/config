@@ -4,6 +4,9 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+# start pulseaudio
+exec pulseaudio --start
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -238,9 +241,6 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
-
-# start pulseaudio
-exec pulseaudio --start
 
 # notification system
 exec mako --ignore-timeout 1 --default-timeout 10000
