@@ -4,9 +4,6 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-# start pulseaudio
-exec pulseaudio --start
-
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -204,15 +201,17 @@ bindsym $mod+r mode "resize"
 
 
 input * {
-
 	xkb_layout dk
-
-	tap enabled
-    	#natural_scroll enabled
-	middle_emulation enabled
-	dwt enabled
-
 }
+
+input 2:7:SynPS/2_Synaptics_TouchPad {
+	natural_scroll enabled
+	middle_emulation enabled
+	tap enabled
+	dwt enabled
+}
+
+
 
 # Set screens for home computer
 output HDMI-A-1 pos 0 0 res 1920x1080
