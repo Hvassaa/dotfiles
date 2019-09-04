@@ -8,8 +8,8 @@ set cursorline
 color ron
 
 " Set <leader> and <localleader> to <Space>
-let mapleader = ","
-let maplocalleader = ","
+"let mapleader = ","
+"let maplocalleader = ","
 
 """ PLUG BEGIN
 " Vim-plug (plugin manager)
@@ -25,9 +25,9 @@ call plug#end()
 """ PLUG OVER
 
 " Guides for navigating, thanks Luke
-noremap <leader><leader> <Esc>/<++><Enter>c4l
-inoremap <leader><leader> <Esc>/<++><Enter>c4l
-vnoremap <leader><leader> <Esc>/<++><Enter>c4l
+"noremap <leader><leader> <Esc>/<Enter>c4l
+"inoremap <leader><leader> <Esc>/<++><Enter>c4l
+"vnoremap <leader><leader> <Esc>/<++><Enter>c4l
 
 " Use omni-completion with vimtex (enabled by default)
 let g:vimtex_complete_enabled = 1
