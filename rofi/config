@@ -1,5 +1,6 @@
-rofi.theme:         Indego
-
-rofi.font:          Source Code Pro 14
-
-rofi.modi:          drun
+rofi.theme:		Monokai
+rofi.lines:		20
+rofi.font:		Source Code Pro 14
+rofi.modi:		drun
+rofi.monitor:		XWAYLAND0
+rofi.show-icons:	true
