@@ -231,12 +231,13 @@ output DP-5 pos 3286 0 res 1920x1200 transform 270
 
 
 # Border config
-default_border pixel 3
-#ff3300
+default_border pixel 4
+
+# Colors - mostly standard
 
 # class                 border  backgr. text    indicator child_border
 
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #ff3300
+client.focused          #4c7899 #ff3300  #ffffff #2e9ef4   #ff3300
 
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 
@@ -246,16 +247,15 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-
-
 client.background       #ffffff
 
 # Lock the screen
 bindsym $mod+Ctrl+l exec swaylock --color 000000
 
-font pango: Source Code Pro Bold 14px
-gaps inner 10
-#gaps outer 0
+#font pango: Source Code Pro Bold 14px
+font pango:Hack Bold 14px
+gaps inner 15
+gaps outer 0
 
 # Take a screenshot of a specefied area
 # and save it as ~/S-D-M-Y.png
