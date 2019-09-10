@@ -1,0 +1,17 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Start sway when logging in on tty1
+if [[ "$(tty)" == '/dev/tty1']]; then
+	exec sway
+fi
+
+alias ls='ls --color=auto'
+PS1=' -> '
+
+# Load environment variables
+source $HOME/.config/profile/env.conf
