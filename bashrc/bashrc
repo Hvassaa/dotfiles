@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Start sway when logging in on tty1
-if [[ "$(tty)" == '/dev/tty1']]; then
+# If running from tty1 start sway
+if [ "$(tty)" = "/dev/tty1" ]; then
 	exec sway
 fi
 
